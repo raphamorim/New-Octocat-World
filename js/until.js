@@ -47,13 +47,3 @@ function fadeOut(el, callback, time) {
 
   tick();
 }
-
-function pressKey(el){
-  var key = document.querySelector(el);
-      key.style.opacity = 0;
-      key.style.display = 'block';
-
-      fadeIn(key,function(){
-        fadeOut(key, 100);
-      }, 100);
-}
