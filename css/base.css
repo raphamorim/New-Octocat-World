@@ -71,8 +71,12 @@ h2 {
 .menu {
   position: relative;
   width: 500px;
-  float: left;
+  margin: 0 auto;
+  margin-top: 60px;
+  transition: all 800ms ease;
 }
+.menuToUp { margin-top: 0px; }
+
 .gameTitle h1, h2 {
   font-family: "SuperMario", Helvetica, sans-serif;
   text-align: center;
@@ -150,8 +154,9 @@ h2 {
   width: 100%;
   float: left;
 }
+.help>.question { padding: 20px; text-align: center; }
 
-.btn-start-game  {
+.btn-menu  {
   padding: 15px 25px;
   text-decoration: none;
   box-shadow: inset 0px 0px 5px #222;
@@ -164,6 +169,6 @@ h2 {
   background: rgba(0, 0, 0, .2);
   font-weight: 500;
 }
-.btn-start-game:hover  {
+.btn-menu:hover  {
   box-shadow: inset 0px 0px 15px #222
 }
