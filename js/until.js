@@ -2,7 +2,7 @@
 /* Some until functions */
 
 function gameIsOn(){
-  if(document.querySelector('.info').style.display == 'none')
+  if(document.querySelector('.menu').style.display == 'none')
       return true
 
   return false
@@ -35,7 +35,6 @@ function fadeOut(el, callback, time) {
   if (time == undefined) time = 500;
   var last = +new Date();
   var tick = function() {
-
     el.style.opacity = el.style.opacity - (new Date() - last) / time;
     last = +new Date();
 

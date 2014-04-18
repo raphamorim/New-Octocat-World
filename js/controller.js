@@ -1,23 +1,41 @@
 'use strict';
 /* Events */
 
+/* start tutorial */
+var btnTutorial = document.querySelector('.tutorial');
+btnTutorial.addEventListener("click", tutorial, false);
+
 /* start game */
-var btnStart = document.querySelector('.btn-start-game');
+var btnStart = document.querySelector('.start-game');
 btnStart.addEventListener("click", startGame, false);
 
 /* keyboard */
 document.addEventListener('keydown', function(event) {
-    if(!gameIsOn()) return false;
+    if (!gameIsOn()) return false;
 
-    if(event.keyCode == 37)
-        return pressKey('.left');
+    switch (event.keyCode) {
+        case 37:
+            pressKey('.left');
+            break;
 
-    if(event.keyCode == 38)
-        return pressKey('.up');
+        case 38:
+            pressKey('.up');
+            break;
 
-    if(event.keyCode == 39)
-        return pressKey('.right');
+        case 39:
+            pressKey('.right');
+            break;
 
-    if(event.keyCode == 40)
-        return pressKey('.down');
+        case 40:
+            pressKey('.down');
+            break;
+
+        case 65:
+            pressKey('.btn-a');
+            break;
+
+        case 83:
+            pressKey('.btn-b');
+            break;
+    }
 });
