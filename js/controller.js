@@ -1,8 +1,12 @@
 'use strict';
 /* Events */
 
+/* start tutorial */
+var btnTutorial = document.querySelector('.tutorial');
+btnTutorial.addEventListener("click", tutorial, false);
+
 /* start game */
-var btnStart = document.querySelector('.btn-start-game');
+var btnStart = document.querySelector('.start-game');
 btnStart.addEventListener("click", startGame, false);
 
 /* keyboard */
