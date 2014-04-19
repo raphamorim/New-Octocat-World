@@ -1,0 +1,26 @@
+/* First Level  */
+.first .floor {
+    position: absolute;
+    background: url('../images/levels/1/floor.png') repeat-x;
+    height: 120px;
+    width: 100%;
+    bottom: 0;
+    z-index: 2;
+}
+.first .background {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.first .background img {
+    height: 100%;
+    width: 100%;
+}
+.octocat {
+    position: absolute;
+    z-index: 3;
+    bottom: 100px;
+}
