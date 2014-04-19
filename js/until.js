@@ -64,14 +64,14 @@ function fadeOut(el, callback, time) {
 
 function moveToLeft(el, speed) {
     if(speed == null) speed = 0;
-    el.style.left = (parseInt(el.style.left) - speed++) + 'px';
+    el.style.left = (parseInt(el.style.left) - (speed++)) + 'px';
 
     if(speed <= 5) moveToLeft(el, speed);
 }
 
 function moveToRight(el, speed) {
     if(speed == null) speed = 20;
-    el.style.left = (parseInt(el.style.left) + speed--) + 'px';
+    el.style.left = (parseInt(el.style.left) + (speed - 0.3)) + 'px';
 
     if(speed <= 0) moveToLeft(el, speed);
 }
