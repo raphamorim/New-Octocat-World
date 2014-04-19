@@ -18,11 +18,16 @@ function tutorial() {
 }
 
 function startGame() {
-    var menu = document.querySelector('.info');
-        menu.style.opacity = 1;
-        menu.style.display = 'block';
+    var menu = document.querySelector('.menu'),
+        help = document.querySelector('.help'),
+        phase = document.querySelector('.level');
 
-    fadeOut(menu, function(){
+    phase.style.opacity = 0;
+    phase.style.display = 'block';
+
+    fadeOut(help, function(){
         menu.style.display = 'none';
-    }, 700);
+        document.querySelector('.octocat').style.left = '5px';
+        fadeIn(phase);
+    });
 }
