@@ -71,12 +71,13 @@ function moveToLeft(el, speed) {
 
 function moveToRight(el, speed) {
     if(speed == null) speed = 20;
-    el.style.left = (parseInt(el.style.left) + (speed - 0.1)) + 'px';
+    el.style.left = (parseInt(el.style.left) + (speed - 1)) + 'px';
 
     if(speed <= 0) moveToLeft(el, speed);
 }
 
 function moveJump(el) {
+    if(el.classList.contains('jumpToUp')) return;
     el.classList.add('jumpToUp');
 
     var trigger = window.setInterval(function(){

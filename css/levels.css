@@ -25,5 +25,5 @@
     bottom: 100px;
     transition: all 400ms ease;
 }
-.jumpToUp { bottom: 200px; }
+.jumpToUp { bottom: 300px; }
 .jumpToDown { bottom: 100px; }
