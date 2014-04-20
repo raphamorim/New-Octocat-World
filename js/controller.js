@@ -26,5 +26,9 @@ document.addEventListener('keydown', function(event) {
         case 39:
             return moveToRight(octocat);
             break;
+
+        case 32:
+            return moveJump(octocat);
+            break;
     }
 });
