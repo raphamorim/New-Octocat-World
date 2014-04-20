@@ -1,6 +1,9 @@
 'use strict';
 /* Events */
 
+// To play game without menu
+onReady(startGame());
+
 /* start tutorial */
 var btnTutorial = document.querySelector('.tutorial');
 btnTutorial.addEventListener("click", tutorial, false);
@@ -11,31 +14,25 @@ btnStart.addEventListener("click", startGame, false);
 
 /* keyboard */
 document.addEventListener('keydown', function(event) {
+    var octocat = document.querySelector('.octocat');
+
     if (!gameIsOn()) return false;
 
     switch (event.keyCode) {
         case 37:
-            pressKey('.left');
-            break;
-
-        case 38:
-            pressKey('.up');
+            return moveToLeft(octocat);
             break;
 
         case 39:
-            pressKey('.right');
+            return moveToRight(octocat);
             break;
 
-        case 40:
-            pressKey('.down');
+        case 38:
+            return moveJump(octocat);
             break;
 
-        case 65:
-            pressKey('.btn-a');
-            break;
-
-        case 83:
-            pressKey('.btn-b');
+        case 32:
+            return moveJump(octocat);
             break;
     }
 });
