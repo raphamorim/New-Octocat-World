@@ -2,7 +2,7 @@
 /* Events */
 
 // To play game without menu
-onReady(startGame());
+// onReady(startGame());
 
 /* start tutorial */
 var btnTutorial = document.querySelector('.tutorial');

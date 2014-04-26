@@ -66,22 +66,27 @@ function moveToLeft(el, speed) {
     if(speed == null) speed = 0;
     el.style.left = (parseInt(el.style.left) - (speed++)) + 'px';
 
-    if(speed <= 5) moveToLeft(el, speed);
+    if(speed <= 6) moveToLeft(el, speed);
 }
 
 function moveToRight(el, speed) {
-    if(speed == null) speed = 20;
-    el.style.left = (parseInt(el.style.left) + (speed - 1)) + 'px';
-
-    if(speed <= 0) moveToLeft(el, speed);
+    if(speed == null) speed = 6;
+    // if(octocat.jumping === true) speed = 30;
+        el.style.left = (parseInt(el.style.left) + (speed--)) + 'px';
+    if(speed >= 0) moveToRight(el, speed);
 }
 
 function moveJump(el) {
-    if(el.classList.contains('jumpToUp')) return;
+    if(octocat.jumping === true) return false;
+    octocat.jumping = true;
     el.classList.add('jumpToUp');
 
     var trigger = window.setInterval(function(){
         el.classList.remove('jumpToUp');
+        var wait = window.setInterval(function(){
+            octocat.jumping = false;
+            clearInterval(wait);
+        }, 250);
         clearInterval(trigger);
     }, 300);
 }
